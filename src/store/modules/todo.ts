@@ -29,7 +29,7 @@ function reducer(state = initalState, action: AllAction): typeof initalState {
         status: TodoTaskStatusEnum.UNDONE,
       }
       state.todoList.unshift(task)
-      return { ...state }
+      return { ...state, todoList: [...state.todoList] }
     }
 
     case TodoTaskAcitonTypeEnum.CHANGE_STATUS: {
@@ -38,7 +38,7 @@ function reducer(state = initalState, action: AllAction): typeof initalState {
       item.status = item.status === TodoTaskStatusEnum.DOME
         ? TodoTaskStatusEnum.UNDONE
         : TodoTaskStatusEnum.DOME
-      return { ...state }
+      return { ...state, todoList: [...state.todoList] }
     }
 
     case TodoTaskAcitonTypeEnum.EDIT_TODO_CONTENT: {
