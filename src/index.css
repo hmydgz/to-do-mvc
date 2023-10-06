@@ -4,6 +4,7 @@
 
 :root {
   --bgc: #242424;
+  --input-bgc: rgb(59,59,59);
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

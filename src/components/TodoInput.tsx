@@ -18,6 +18,7 @@ const TodoInput: FC = () => {
       type="text"
       placeholder="What needs to be done?"
       className="outline-none py-2 px-4 w-full text-base rounded border-transparent border focus:border-cyan-400 transition-all"
+      style={{ backgroundColor: 'var(--input-bgc)' }}
       value={taskContent}
       onChange={(e) => setTaskContent(e.target.value)}
       onKeyDown={handleKeyDown}
